@@ -20,10 +20,11 @@
         $string='';
         foreach(ProductHydrator::getFilteredProducts() as $product) {
             $string .= '<div class="col-md-3">
-                            <img src=" ' . $product->getImage() . ' alt="product image">
+                            <img src=" ' . $product->getImage() . '" alt="product image">
                             <h2>' . $product->getTitle() . '</h2>
-                            <p>' . $product->getPrice() . '</p>
-                            <button></button>';
+                            <p>£' . $product->getPrice() . '</p>
+                            <button type="button" class="btn btn-link">View Item</button>
+                            </div>';
         }
         echo $string;
         ?>
