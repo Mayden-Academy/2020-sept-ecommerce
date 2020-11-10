@@ -11,26 +11,32 @@
 
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>Robot Stores</h1>
+    <div class="container-fluid robot-header">
+        <div class="sticky-top text-center">
+            <h1>Robot Stores</h1>
+        </div>
     </div>
-    <div class="container">
+    <div class="container text-center">
         <div class="row">
         <?php
         $string='';
         foreach(ProductHydrator::getFilteredProducts() as $product) {
-            $string .= '<div class="col-md-3">
+            $string .= '<div class="col-md-3 d-flex flex-column justify-content-around baseProduct">
                             <img src=" ' . $product->getImage() . '" alt="product image">
                             <h2>' . $product->getTitle() . '</h2>
                             <p>£' . $product->getPrice() . '</p>
-                            <button type="button" class="btn btn-link">View Item</button>
-                            </div>';
+                            <button type="button" class="btn btn-info btn-sm">View Item</button>
+                         </div>';
         }
         echo $string;
         ?>
         </div>
     </div>
-
+    <div class="container-fluid robot-footer">
+        <div class="text-center">
+            <h4>Moss Piglets 2020</h4>
+        </div>
+    </div>
 </body>
 </html>
 <?php
