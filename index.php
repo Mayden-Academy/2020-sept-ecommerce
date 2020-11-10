@@ -19,8 +19,13 @@
         <?php
         $string='';
         foreach(ProductHydrator::getFilteredProducts() as $product) {
-            $string .= '<div class="col-md-3"><img src=" ' . $product->getImage() . ' alt="product image">';
-        } 
+            $string .= '<div class="col-md-3">
+                            <img src=" ' . $product->getImage() . ' alt="product image">
+                            <h2>' . $product->getTitle() . '</h2>
+                            <p>' . $product->getPrice() . '</p>
+                            <button></button>';
+        }
+        echo $string;
         ?>
         </div>
     </div>
