@@ -23,10 +23,14 @@ require('vendor/autoload.php');
         <?php
         foreach(\RobotStores\Hydrators\ProductHydrator::getFilteredProducts() as $product) {
             echo '<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-between baseProduct">
-                       <div><img src=" ' . $product->getImage() . '" alt="product image">
-                       <h2>' . $product->getTitle() . '</h2></div>
-                       <div><p>£' . $product->getPrice() . '</p>
-                       <button type="button" class="btn btn-info btn-sm">View Item</button></div>
+                       <div>
+                            <img src=" ' . $product->getImage() . '" alt="product image">
+                            <h2>' . $product->getTitle() . '</h2>
+                       </div>
+                       <div>
+                            <p>£' . $product->getPrice() . '</p>
+                            <button type="button" class="btn btn-info btn-sm">View Item</button>
+                       </div>
                   </div>';
         }
         ?>
