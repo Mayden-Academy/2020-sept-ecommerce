@@ -13,18 +13,26 @@
 </head>
 <body>
     <header>
-        <div class="container-fluid">
-            <h1>Robot Stores</h1>
+        <div class="container-fluid robotHeader">
+            <div class="sticky-top text-center align-middle">
+                <h1 class="align-middle">Robot Stores</h1>
+            </div>
         </div>
     </header>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row DetailProduct">
         <?php
         $object = new DetailedProduct();
         echo $object->displayDetailedProduct();
         ?>
         </div>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="container-fluid robotFooter">
+            <div class="text-center">
+                <h4>Moss Piglets 2020</h4>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
