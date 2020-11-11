@@ -1,45 +1,28 @@
+<?php
+    require('methods.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="static/css/normalise.css" type="text/css" rel="stylesheet"> <!-- this makes sure all browsers start with the same style -->
+    <link href="static/css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Robot Stores</h1>
+        <div class="container-fluid">
+            <h1>Robot Stores</h1>
+        </div>
     </header>
     <div class="container-fluid">
-        <div class="row"> <?php displayProduct($product)?>
-            <div class="Left col-sm-12 col-md-6">
-                <div class="bigImage">
-                    <image class="img-fluid" alt="Product Image">Item image</image>
-                </div>
-                <div class="smallImages">
-<!--                    --><?php
-//                        if image 2 = True echo image url; alt="second image"
-//                        if image 3 = True echo image url; alt="third image"
-//                    ?>
-                </div>
-            </div>
-            <div class="Right col-sm-12 col-md-6">
-                <div class="h-15">
-                    <h2>Title Text</h2>
-                </div>
-                <div class="h-35">
-                    <h4><?php $object->get(image2) ?></h4>
-                    <p>Description</p>
-                </div>
-                <div class="h-15">
-                    <h3>Price: X</h3>
-                </div>
-                <div class="h-35">
-                    <div class="float-left">
-                        <h4>Character</h4>
-                        <p>Character description</p>
-                    </div>
-                    <image class="img-fluid float-right" alt="Character Image">Robot Image</image>
-                </div>
-            </div>
+        <div class="row">
+        <?php
+        $object = new DetailedProduct();
+        echo $object->displayDetailedProduct();
+        ?>
         </div>
     </div>
     <footer></footer>
