@@ -1,0 +1,56 @@
+.DetailProduct {
+    margin: 10px 0px;
+}
+.main-image {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 250px;
+    padding: 5px;
+    background-position: center;
+}
+.secondaryImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-images {
+    height: auto;
+    width: 50%;
+    padding: 5px 5px 0px 5px;
+    background-position: center;
+}
+
+.characterInfo {
+    display: flex;
+    justify-content: space-between;
+}
+.characterImage {
+    height: 214px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.image-container {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .DetailProduct {
+        flex-direction: column-reverse;
+    }
+
+    .characterInfo {
+        flex-direction: column;
+    }
+
+    .characterImageContainer {
+        text-align: center;
+    }
+
+    .productContent {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

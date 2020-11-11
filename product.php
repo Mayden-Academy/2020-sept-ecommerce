@@ -10,12 +10,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="static/css/normalise.css" type="text/css" rel="stylesheet"> <!-- this makes sure all browsers start with the same style -->
     <link href="static/css/style.css" type="text/css" rel="stylesheet">
+    <link href="static/css/productpage.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container-fluid robotHeader">
-            <div class="sticky-top text-center align-middle">
-                <h1 class="align-middle">Robot Stores</h1>
+            <div class="d-flex sticky-top justify-content-between">
+                <div>
+                    <button class="btn btn-primary">Home</button>
+                </div>
+                <div>
+                    <h1>Robot Stores</h1>
+                </div>
+                <div></div>
             </div>
         </div>
     </header>
