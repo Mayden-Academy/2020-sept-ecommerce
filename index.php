@@ -39,4 +39,3 @@ require('vendor/autoload.php');
     </footer>
 </body>
 </html>
-<?php
