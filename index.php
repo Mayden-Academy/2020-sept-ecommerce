@@ -1,4 +1,6 @@
-
+<?php
+require('vendor/autoload.php');
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,11 +13,11 @@
 
 </head>
 <body>
-    <div class="container-fluid robotHeader">
+    <header class="container-fluid robotHeader">
         <div class="sticky-top text-center align-middle">
             <h1 class="align-middle">Robot Stores</h1>
         </div>
-    </div>
+    </header>
     <div class="container text-center">
         <div class="row">
         <?php
@@ -30,11 +32,11 @@
         ?>
         </div>
     </div>
-    <div class="container-fluid robotFooter">
+    <footer class="container-fluid robotFooter">
         <div class="text-center">
             <h4>Moss Piglets 2020</h4>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
 <?php
