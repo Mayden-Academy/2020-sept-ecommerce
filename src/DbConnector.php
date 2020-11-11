@@ -10,7 +10,7 @@ class DbConnector
     static public function getConnection(): \PDO
     {
         if ( self::$db == null ) {
-            $db = new \PDO('mysql:host=db;dbname=robot-stores', 'root', 'password');
+            $db = new \PDO('mysql:host=db;dbname=robot_stores', 'root', 'password');
         }
         $db->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
         return $db;
