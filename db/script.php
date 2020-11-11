@@ -48,10 +48,10 @@ $query->execute();
 
 $query = $db->prepare('INSERT INTO `products` (`title`, `price`, `image`, `category_id`, `character_id`, `description`, `image2`, `image3`) VALUES (:title, :price, :image, :category_id, :character_id, :description, :image2, :image3)');
 foreach ($data['products'] as $product) {
-    if (!isset($product['image2'])){
+    if (!isset($product['image2'])) {
         $product['image2'] = null;
     }
-    if (!isset($product['image3'])){
+    if (!isset($product['image3'])) {
         $product['image3'] = null;
     }
     $query->execute(['title' => $product['title'], 'price' => $product['price'], 'image' => $product['image'], 'image2' => $product['image2'], 'image3' => $product['image3'], 'category_id' => $product['cat'], 'character_id' => $product['char'], 'description' => $product['desc']]);
