@@ -6,7 +6,7 @@ require('vendor/autoload.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tab Title</title>
+    <title>Robot Stores</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="static/css/normalise.css" type="text/css" rel="stylesheet">
     <link href="static/css/style.css" type="text/css" rel="stylesheet">
@@ -21,7 +21,7 @@ require('vendor/autoload.php');
     <div class="container text-center">
         <div class="row">
         <?php
-        foreach(ProductHydrator::getFilteredProducts() as $product) {
+        foreach(\RobotStores\Hydrators\ProductHydrator::getFilteredProducts() as $product) {
             echo '<div class="col-md-3 d-flex flex-column justify-content-around baseProduct">
                             <img src=" ' . $product->getImage() . '" alt="product image">
                             <h2>' . $product->getTitle() . '</h2>
