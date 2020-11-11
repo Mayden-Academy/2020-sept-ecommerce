@@ -1,21 +1,9 @@
 <?php
 $request = curl_init('https://dev.maydenacademy.co.uk/resources/store_products/products.json');
-
 curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
-
 $response = curl_exec($request);
-
 $data = json_decode($response, true);
-
 curl_close($request);
-
-// which data goes where? sort it out!
-// convert to SQL statement
-
-// connect to database
-// push data into database
-
-
 
 
 $db = new PDO('mysql:host=db;dbname=robot_stores', 'root', 'password');
@@ -30,9 +18,6 @@ foreach ($data['characters'] as $character) {
     $query->execute(['name' => $character['name'], 'image' => $character['image'], 'description' => $character['desc']]);
 }
 
-$query = $db->prepare('INSERT INTO `characters` (`name`, `image`, `description`) VALUES (:name, :image, :description)');
-foreach ($data['characters'] as $character) {
-    $query->execute(['name' => $character['name'], 'image' => $character['image'], 'description' => $character['desc']]);
-}
+
 
 //
