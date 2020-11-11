@@ -1,8 +1,6 @@
 <?php
 
-
-namespace RobotStores;
-
+namespace RobotStores\Entities;
 
 class BaseProduct
 {
