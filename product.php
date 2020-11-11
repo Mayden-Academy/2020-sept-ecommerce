@@ -15,14 +15,9 @@
 <body>
     <header>
         <div class="container-fluid robotHeader">
-            <div class="d-flex sticky-top justify-content-between">
-                <div>
-                    <button class="btn btn-primary">Home</button>
-                </div>
-                <div>
-                    <h1>Robot Stores</h1>
-                </div>
-                <div></div>
+            <div class="d-flex sticky-top justify-content-start">
+                <button class="float-left">Home</button>
+                <h1>Robot Stores</h1>
             </div>
         </div>
     </header>

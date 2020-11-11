@@ -1,3 +1,10 @@
+.robotHeader button {
+    margin-right: -60px;
+    width: 60px;
+    border-radius: 10%;
+
+}
+
 .DetailProduct {
     margin: 10px 0px;
 }
@@ -52,5 +59,11 @@
     .productContent {
         text-align: center;
         margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .robotHeader h1 {
+        font-size: 2rem;
+        font-weight: 700;
     }
 }

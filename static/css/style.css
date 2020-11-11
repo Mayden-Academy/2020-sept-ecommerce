@@ -20,7 +20,7 @@ body {
 }
 
 .robotHeader {
-    height: 10vh;
+    padding: 10px;
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
 }
 
 .robotHeader h1 {
-    margin: 0;
+    margin: 0 auto;
     padding-top: 2vh;
     font-size: 3rem;
     font-weight: 700;
