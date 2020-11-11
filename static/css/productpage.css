@@ -1,3 +1,18 @@
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex-shrink: 0;
+}
+
 .robotHeader button {
     margin-right: -60px;
     width: 60px;
@@ -6,7 +21,7 @@
 }
 
 .DetailProduct {
-    margin: 10px 0px;
+    margin: 30px 0px 10px 0px;
 }
 .main-image {
     display: block;
@@ -32,6 +47,10 @@
     display: flex;
     justify-content: space-between;
 }
+.characterInfo p {
+    padding-right: 10px;
+}
+
 .characterImage {
     height: 214px;
     width: auto;
@@ -42,7 +61,13 @@
     text-align: center;
 }
 
+.productContent h4 {
+    font-family: 'Turret Road', monospace;
+}
 
+.productContent p {
+    font-family: 'Turret Road', monospace;
+}
 @media only screen and (max-width: 768px) {
     .DetailProduct {
         flex-direction: column-reverse;
@@ -53,7 +78,7 @@
     }
 
     .characterImageContainer {
-        text-align: center;
+        align-self: center;
     }
 
     .productContent {

@@ -13,20 +13,22 @@
     <link href="static/css/productpage.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container-fluid robotHeader">
-            <div class="d-flex sticky-top justify-content-start">
-                <button class="float-left">Home</button>
-                <h1>Robot Stores</h1>
+    <div class="content">
+        <header>
+            <div class="container-fluid robotHeader">
+                <div class="d-flex sticky-top justify-content-start">
+                    <button class="float-left">Home</button>
+                    <h1>Robot Stores</h1>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row DetailProduct">
-        <?php
-        $object = new DetailedProduct();
-        echo $object->displayDetailedProduct();
-        ?>
+        </header>
+        <div class="container-fluid">
+            <div class="row DetailProduct">
+            <?php
+            $object = new DetailedProduct();
+            echo $object->displayDetailedProduct();
+            ?>
+            </div>
         </div>
     </div>
     <footer>

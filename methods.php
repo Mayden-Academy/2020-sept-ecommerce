@@ -6,7 +6,7 @@ class DetailedProduct {
     public $price = 23;
     public $image = 'https://images.unsplash.com/photo-1593376853899-fbb47a057fa0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2758&q=80';
     public $imageTwo = 'https://images.unsplash.com/photo-1593376853899-fbb47a057fa0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2758&q=80';
-    public $imageThree = NULL;
+    public $imageThree = 'https://images.unsplash.com/photo-1593376853899-fbb47a057fa0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2758&q=80';
     public $category = [
         'id' => 1,
         'name' => 'Destroyer of Worlds'
@@ -23,13 +23,13 @@ class DetailedProduct {
 
     public function displayDetailedProduct(): string {
 
-        $imageTwo = isset($this->imageTwo) ? '<img src="' . $this->imageTwo . '"class="secondary-images" alt="Product Image">' : '';
+        $imageTwo = isset($this->imageTwo) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $this->imageTwo . '"class="secondary-images" alt="Product Image"></div>' : '';
 
-        $imageThree = isset($this->imageThree) ? '<img src="' . $this->imageThree . '"class="secondary-images" alt="Product Image">' : '';
+        $imageThree = isset($this->imageThree) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $this->imageThree . '"class="secondary-images" alt="Product Image"></div>' : '';
 
 
         return '<div class="productImages col-sm-12 col-md-6">
-                <div>
+                <div style="max-width: 400px; margin: 0 auto;">
                     <img src="'. $this->image . '"class="img-fluid" alt="Product Image">
                 </div>
                 <div class="secondaryImageContainer">
@@ -45,7 +45,7 @@ class DetailedProduct {
                     <p>' . $this->productDescription . '</p>
                 </div>
                 <div>
-                    <h3> Price: ' . $this->price . '</h3>
+                    <h3> Price: £' . $this->price . '</h3>
                 </div>
                 <div class="characterInfo">
                     <div class="float-left">
