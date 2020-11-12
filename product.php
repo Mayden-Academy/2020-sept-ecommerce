@@ -3,8 +3,15 @@ require('vendor/autoload.php');
 if (empty($_GET['id'])) {
     header("Location: index.php");
 }
+
 $productID = $_GET['id'];
-$product = \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
+
+try {
+    $product = \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
+} catch (\Exception $exception) {
+    header("Location: index.php");
+}
+
 $imageTwo = '';
 $imageThree = '';
 if (!empty($product->getImage2())) {

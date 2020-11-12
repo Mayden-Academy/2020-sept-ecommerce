@@ -22,7 +22,11 @@ class ProductHydrator
                                                     `description` FROM `products` WHERE `id` = ?;');
         $query->execute([$productId]);
         $query->setFetchMode(\PDO::FETCH_CLASS, '\RobotStores\Entities\DetailedProduct');
-        return $query->fetch();
+        $product = $query->fetch();
+        if ($product === false) {
+            throw new \Exception('This product does not exist');
+        }
+        return $product;
     }
 
 }
