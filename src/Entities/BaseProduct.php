@@ -9,7 +9,7 @@ class BaseProduct
     protected float $price;
     protected string $image;
 
-    public function getID(): int
+    public function getId(): int
     {
         return $this->id;
     }

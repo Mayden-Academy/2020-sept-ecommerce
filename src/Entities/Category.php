@@ -4,13 +4,13 @@
 namespace RobotStores\Entities;
 
 
-class Category extends \RobotStores\Interfaces\CategoryInterface
+class Category implements \RobotStores\Interfaces\CategoryInterface
 {
     private int $id;
 
     private string $name;
 
-    public function getID(): int
+    public function getId(): int
     {
         return $this->id;
     }

@@ -4,7 +4,7 @@
 namespace RobotStores\Interfaces;
 
 
-class CategoryInterface
+interface CategoryInterface
 {
 
 }

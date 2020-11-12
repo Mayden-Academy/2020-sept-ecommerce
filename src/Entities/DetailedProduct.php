@@ -3,6 +3,8 @@
 
 namespace RobotStores\Entities;
 
+use RobotStores\Interfaces\CategoryInterface;
+use RobotStores\Interfaces\CharacterInterface;
 
 class DetailedProduct extends BaseProduct
 {
@@ -10,9 +12,9 @@ class DetailedProduct extends BaseProduct
 
     private ?string $image3;
 
-    private \RobotStores\Interfaces\CategoryInterface $category;
+    private CategoryInterface $category;
 
-    private \RobotStores\Interfaces\CharacterInterface $character;
+    private CharacterInterface $character;
 
     private int $categoryId;
 
@@ -36,12 +38,12 @@ class DetailedProduct extends BaseProduct
         return $this->image3;
     }
 
-    public function getCategory(): \RobotStores\Interfaces\CategoryInterface
+    public function getCategory(): CategoryInterface
     {
         return $this->category;
     }
 
-    public function getCharacter(): \RobotStores\Interfaces\CharacterInterface
+    public function getCharacter(): CharacterInterface
     {
         return $this->character;
     }

@@ -4,7 +4,7 @@
 namespace RobotStores\Entities;
 
 
-class Character extends \RobotStores\Interfaces\CharacterInterface
+class Character implements \RobotStores\Interfaces\CharacterInterface
 {
     private int $id;
 
@@ -14,7 +14,7 @@ class Character extends \RobotStores\Interfaces\CharacterInterface
 
     private string $description;
 
-    public function getID(): int
+    public function getId(): int
     {
         return $this->id;
     }

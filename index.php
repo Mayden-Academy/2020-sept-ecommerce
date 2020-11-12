@@ -8,7 +8,6 @@ require('vendor/autoload.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Robot Stores</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="static/css/normalise.css" type="text/css" rel="stylesheet">
     <link href="static/css/style.css" type="text/css" rel="stylesheet">
 </head>
 
@@ -29,7 +28,7 @@ require('vendor/autoload.php');
                        </div>
                        <div>
                             <p>£' . $product->getPrice() . '</p>
-                            <a href="product.php?id=' . $product->getID() . '"><button type="button" class="btn btn-info btn-sm">View Item</button></a>
+                            <a class="btn btn-info btn-sm" role="button" href="product.php?id=' . $product->getID() . '">View Item</a>
                        </div>
                   </div>';
         }
