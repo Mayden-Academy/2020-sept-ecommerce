@@ -14,7 +14,7 @@ require('vendor/autoload.php');
 
 <body>
     <header class="container-fluid robotHeader">
-        <div class="sticky-top text-center align-middle">
+        <div class="text-center align-middle">
             <h1 class="align-middle">Robot Stores</h1>
         </div>
     </header>
