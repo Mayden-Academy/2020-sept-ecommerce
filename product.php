@@ -46,7 +46,7 @@
                 </div>
                 <div class="productContent col-sm-12 col-md-6">
                     <div>
-                        <h2 class="mb-4 text-center"><?php echo ->getTitle();?></h2>
+                        <h2 class="mb-4 text-center"><?php echo $product->getTitle();?></h2>
                     </div>
                     <div>
                         <h4 class="mt-2"><?php echo $productCategory->getName(); ?></h4>
