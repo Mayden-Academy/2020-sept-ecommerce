@@ -26,44 +26,41 @@
         <div class="container-fluid">
             <div class="row detailProduct">
             <?php
+            // change this to ProductHydrator::GetProduct
             $obj = new DetailedProduct();
-
 
             $imageTwo = isset($obj->imageTwo) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageTwo . '"class="secondaryImages" alt="Product Image"></div>' : '';
 
             $imageThree = isset($obj->imageThree) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageThree . '"class="secondaryImages" alt="Product Image"></div>' : '';
-
-
-            echo '<div class="productImages col-sm-12 col-md-6">
-                    <div style="max-width: 400px; margin: 0 auto;">
-                        <img src="' . $obj->image . '"class="img-fluid" alt="Product Image">
+            ?>
+            <div class="productImages col-sm-12 col-md-6">
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <img src="<?php echo $obj->image ?>"class="img-fluid" alt="Product Image">
+                </div>
+                <div class="secondaryImageContainer">
+                    <?php echo $imageTwo . $imageThree ?>
+                </div>
+            </div>
+            <div class="productContent col-sm-12 col-md-6">
+                <div>
+                    <h2 class="mb-4 text-center"><?php echo $obj->title ?></h2>
+                </div>
+                <div>
+                    <h4 class="mt-2"><?php echo $obj->category['name'] ?></h4>
+                    <p class="mb-4"><?php echo $obj->productDescription ?></p>
+                </div>
+                <div>
+                    <h3 class="mb-4 text-center"> Price: £<?php echo $obj->price ?></h3>
+                </div>
+                <div class="characterInfo">
+                    <div class="float-left">
+                        <h4 class="mt-2">Character: <?php echo $obj->character['name'] ?></h4>
+                        <p class="mt-2"><?php echo $obj->character['description'] ?></p>
                     </div>
-                    <div class="secondaryImageContainer">
-                        ' . $imageTwo . $imageThree . '
+                    <div class="float-right characterImageContainer">
+                        <img src="<?php echo $obj->character['image'] ?>" class="characterImage" alt="Character Image">
                     </div>
                 </div>
-                <div class="productContent col-sm-12 col-md-6">
-                    <div>
-                        <h2 class="mb-4 text-center">' . $obj->title . '</h2>
-                    </div> 
-                    <div>
-                        <h4 class="mt-2">' . $obj->category['name'] . '</h4>
-                        <p class="mb-4">' . $obj->productDescription . '</p>
-                    </div>
-                    <div>
-                        <h3 class="mb-4 text-center"> Price: £' . $obj->price . '</h3>
-                    </div>
-                    <div class="characterInfo">
-                        <div class="float-left">
-                            <h4 class="mt-2">Character: ' . $obj->character['name'] . '</h4>
-                            <p class="mt-2">' . $obj->character['description'] . '</p>
-                        </div>
-                        <div class="float-right characterImageContainer">
-                            <img src="' . $obj->character['image'] . '" class="characterImage" alt="Character Image">
-                        </div>
-                    </div>
-                </div>';
-            ?>
             </div>
         </div>
     </div>
