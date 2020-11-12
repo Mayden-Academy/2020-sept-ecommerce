@@ -22,8 +22,8 @@ class DetailedProduct extends BaseProduct
 
     public function __construct()
     {
-        $this->category = CategoryHydrator::getCategory($this->categoryId);
-        $this->character = CharacterHydrator::getCharacter($this->characterId);
+        $this->category = RobotEntities\Hydrators\CategoryHydrator::getCategory($this->categoryId);
+        $this->character = RobotEntities\Hydrators\CharacterHydrator::getCharacter($this->characterId);
     }
 
     public function getImage2(): ?string
@@ -36,12 +36,12 @@ class DetailedProduct extends BaseProduct
         return $this->image3;
     }
 
-    public function getCategory(): CategoryInterface
+    public function getCategory(): RobotEntities\Interfaces\CategoryInterface
     {
         return $this->category;
     }
 
-    public function getCharacter(): CharacterInterface
+    public function getCharacter(): RobotEntities\Interfaces\CharacterInterface
     {
         return $this->character;
     }
