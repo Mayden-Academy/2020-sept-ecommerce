@@ -4,7 +4,7 @@
 namespace RobotStores\Entities;
 
 
-class Category implements RobotStores\Interfaces\CategoryInterface
+class Category extends \RobotStores\Interfaces\CategoryInterface
 {
     private int $id;
 

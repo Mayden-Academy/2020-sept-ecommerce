@@ -10,9 +10,9 @@ class DetailedProduct extends BaseProduct
 
     private ?string $image3;
 
-    private RobotStores\Interfaces\CategoryInterface $category;
+    private \RobotStores\Interfaces\CategoryInterface $category;
 
-    private RobotStores\Interfaces\CharacterInterface $character;
+    private \RobotStores\Interfaces\CharacterInterface $character;
 
     private int $categoryId;
 
@@ -22,8 +22,8 @@ class DetailedProduct extends BaseProduct
 
     public function __construct()
     {
-        $this->category = RobotStores\Hydrators\CategoryHydrator::getCategory($this->categoryId);
-        $this->character = RobotStores\Hydrators\CharacterHydrator::getCharacter($this->characterId);
+        $this->category = \RobotStores\Hydrators\CategoryHydrator::getCategory($this->categoryId);
+        $this->character = \RobotStores\Hydrators\CharacterHydrator::getCharacter($this->characterId);
     }
 
     public function getImage2(): ?string
@@ -36,12 +36,12 @@ class DetailedProduct extends BaseProduct
         return $this->image3;
     }
 
-    public function getCategory(): RobotStores\Interfaces\CategoryInterface
+    public function getCategory(): \RobotStores\Interfaces\CategoryInterface
     {
         return $this->category;
     }
 
-    public function getCharacter(): RobotStores\Interfaces\CharacterInterface
+    public function getCharacter(): \RobotStores\Interfaces\CharacterInterface
     {
         return $this->character;
     }
