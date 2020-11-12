@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,37 +10,33 @@ body {
 .content {
     flex: 1 0 auto;
 }
+
 .footer {
     flex-shrink: 0;
 }
+
 a {
     color: #000500;
 }
 
 .homeButton {
+    font-size: 1rem;
     margin-right: -60px;
     width: 60px;
     border-radius: 10%;
     height: 100%;
 }
 
-.DetailProduct {
+.detailProduct {
     margin: 30px 0px 10px 0px;
 }
-.main-image {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    height: 250px;
-    padding: 5px;
-    background-position: center;
-}
+
 .secondaryImageContainer {
     display: flex;
     justify-content: center;
 }
 
-.secondary-images {
+.secondaryImages {
     height: auto;
     width: 50%;
     padding: 5px 5px 0px 5px;
@@ -50,6 +47,7 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
 .characterInfo p {
     padding-right: 10px;
 }
@@ -60,7 +58,7 @@ a {
     margin: 0 auto;
 }
 
-.image-container {
+.imageContainer {
     text-align: center;
 }
 
@@ -71,6 +69,7 @@ a {
 .productContent p {
     font-family: 'Turret Road', monospace;
 }
+
 @media only screen and (max-width: 768px) {
     .DetailProduct {
         flex-direction: column-reverse;
@@ -89,6 +88,7 @@ a {
         margin-bottom: 20px;
     }
 }
+
 @media only screen and (max-width: 576px) {
     .robotHeader h1 {
         font-size: 2rem;

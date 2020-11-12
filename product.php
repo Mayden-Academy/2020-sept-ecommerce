@@ -1,5 +1,6 @@
 <?php
     require('methods.php');
+    require('vendor/autoload.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="static/css/normalise.css" type="text/css" rel="stylesheet"> <!-- this makes sure all browsers start with the same style -->
+    <link href="static/css/normalise.css" type="text/css" rel="stylesheet">
     <link href="static/css/style.css" type="text/css" rel="stylesheet">
     <link href="static/css/productpage.css" type="text/css" rel="stylesheet">
 </head>
@@ -23,10 +24,45 @@
             </div>
         </header>
         <div class="container-fluid">
-            <div class="row DetailProduct">
+            <div class="row detailProduct">
             <?php
-            $object = new DetailedProduct();
-            echo $object->displayDetailedProduct();
+            $obj = new DetailedProduct();
+
+
+            $imageTwo = isset($obj->imageTwo) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageTwo . '"class="secondaryImages" alt="Product Image"></div>' : '';
+
+            $imageThree = isset($obj->imageThree) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageThree . '"class="secondaryImages" alt="Product Image"></div>' : '';
+
+
+            echo '<div class="productImages col-sm-12 col-md-6">
+                    <div style="max-width: 400px; margin: 0 auto;">
+                        <img src="' . $obj->image . '"class="img-fluid" alt="Product Image">
+                    </div>
+                    <div class="secondaryImageContainer">
+                        ' . $imageTwo . $imageThree . '
+                    </div>
+                </div>
+                <div class="productContent col-sm-12 col-md-6">
+                    <div>
+                        <h2 class="mb-4 text-center">' . $obj->title . '</h2>
+                    </div> 
+                    <div>
+                        <h4 class="mt-2">' . $obj->category['name'] . '</h4>
+                        <p class="mb-4">' . $obj->productDescription . '</p>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-center"> Price: £' . $obj->price . '</h3>
+                    </div>
+                    <div class="characterInfo">
+                        <div class="float-left">
+                            <h4 class="mt-2">Character: ' . $obj->character['name'] . '</h4>
+                            <p class="mt-2">' . $obj->character['description'] . '</p>
+                        </div>
+                        <div class="float-right characterImageContainer">
+                            <img src="' . $obj->character['image'] . '" class="characterImage" alt="Character Image">
+                        </div>
+                    </div>
+                </div>';
             ?>
             </div>
         </div>

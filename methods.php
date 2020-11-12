@@ -1,6 +1,7 @@
 <?php
 
-class DetailedProduct {
+class DetailedProduct
+{
 //    public $id = 1;
     public $title = 'Robot Apron';
     public $price = 23;
@@ -20,44 +21,6 @@ class DetailedProduct {
 //    public $categoryID = 1;
 //    public $characterID = 2;
     public $productDescription = 'This is a nice Apron';
-
-    public function displayDetailedProduct(): string {
-
-        $imageTwo = isset($this->imageTwo) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $this->imageTwo . '"class="secondary-images" alt="Product Image"></div>' : '';
-
-        $imageThree = isset($this->imageThree) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $this->imageThree . '"class="secondary-images" alt="Product Image"></div>' : '';
-
-
-        return '<div class="productImages col-sm-12 col-md-6">
-                <div style="max-width: 400px; margin: 0 auto;">
-                    <img src="'. $this->image . '"class="img-fluid" alt="Product Image">
-                </div>
-                <div class="secondaryImageContainer">
-                    ' . $imageTwo . $imageThree . '
-                </div>
-            </div>
-            <div class="productContent col-sm-12 col-md-6">
-                <div>
-                    <h2>' . $this->title . '</h2>
-                </div> 
-                <div>
-                    <h4>'. $this->category['name'] . '</h4>
-                    <p>' . $this->productDescription . '</p>
-                </div>
-                <div>
-                    <h3> Price: £' . $this->price . '</h3>
-                </div>
-                <div class="characterInfo">
-                    <div class="float-left">
-                        <h4>Character: ' . $this->character['name'] . '</h4>
-                        <p>' . $this->character['description'] . '</p>
-                    </div>
-                    <div class="float-right characterImageContainer">
-                        <img src="' . $this->character['image'] . '" class="characterImage" alt="Character Image">
-                    </div>
-                </div>
-            </div>';
-    }
 }
 
 
