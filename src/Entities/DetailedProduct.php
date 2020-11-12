@@ -6,9 +6,9 @@ namespace RobotStores\Entities;
 
 class DetailedProduct extends BaseProduct
 {
-    private string $image2;
+    private ?string $image2;
 
-    private string $image3;
+    private ?string $image3;
 
     private CategoryInterface $category;
 
@@ -20,11 +20,14 @@ class DetailedProduct extends BaseProduct
 
     private string $description;
 
-    public function __construct($characterId, $character, $category, $categoryId)
+    public function __construct()
     {
-        $this->$character = CharacterHydrator::getCharacter($this->$characterId);
-        $this->$category = CategoryHydrator::getCategory($this->$categoryId);
+        $this->category = CategoryHydrator::getCategory($this->categoryId);
+        $this->character = CharacterHydrator::getCharacter($this->characterId);
     }
 
-    public function 
+    public function getImage2(): ?string
+    {
+        return $this->image2;
+    }
 }
