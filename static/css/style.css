@@ -19,12 +19,21 @@ body {
     font-family: 'Turret Road', monospace;
 }
 
+.container {
+    min-height: 85vh;
+}
+
+.robotHeader {
+    padding: 10px;
+}
+
 .robotHeader,
 .robotFooter {
     background-color: #117a8b52;
 }
 
 .robotHeader h1 {
+    margin: 0 auto;
     margin-top: 0;
     padding-top: 15px;
     padding-bottom: 10px;
