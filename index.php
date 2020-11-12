@@ -29,7 +29,6 @@ require('vendor/autoload.php');
                        </div>
                        <div>
                             <p>£' . $product->getPrice() . '</p>
-                            <button type="button" class="btn btn-info btn-sm">View Item</button>
                        </div>
                   </div>';
         }
