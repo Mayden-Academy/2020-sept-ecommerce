@@ -14,11 +14,11 @@ try {
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $query = $db->prepare('DROP TABLE `products`');
+    $query = $db->prepare('DROP TABLE IF EXISTS `products`');
     $query->execute();
-    $query = $db->prepare('DROP TABLE `categories`');
+    $query = $db->prepare('DROP TABLE IF EXISTS `categories`');
     $query->execute();
-    $query = $db->prepare('DROP TABLE `characters`');
+    $query = $db->prepare('DROP TABLE IF EXISTS `characters`');
     $query->execute();
 
     $query = $db->prepare('CREATE TABLE `products` (
