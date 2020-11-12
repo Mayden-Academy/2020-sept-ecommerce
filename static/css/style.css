@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Turret Road';
+    src: url('../fonts/Turret_Road/TurretRoad-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Turret Road';
+    font-weight: 700;
+    src: url('../fonts/Turret_Road/TurretRoad-Bold.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    color: #000500;
+    font-family: 'Turret Road', monospace;
+}
+
+.robotHeader {
+    padding: 10px;
+}
+
+.container {
+    min-height: 85vh;
+}
+
+.robotFooter {
+    height: 5vh;
+}
+
+.robotHeader,
+.robotFooter {
+    background-color: #117a8b52;
+}
+
+.robotHeader h1 {
+    margin: 0 auto;
+    padding-top: 2vh;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.robotFooter h4 {
+    font-size: 0.8rem;
+    padding-top: 1.5vh;
+}
+
+p {
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #5f5656;
+}
+
+.baseProduct img {
+    width: 100%;
+}
+
+.baseProduct {
+    padding: 20px;
+}
+
+.baseProduct h2 {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.btn {
+    width: 50%;
+    margin: auto;
+}

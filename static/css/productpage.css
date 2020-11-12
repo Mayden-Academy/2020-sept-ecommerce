@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+a {
+    color: #000500;
+}
+
+.homeButton {
+    font-size: 1rem;
+    margin-right: -60px;
+    width: 60px;
+    border-radius: 10%;
+    height: 100%;
+}
+
+.detailProduct {
+    margin: 30px 0px 10px 0px;
+}
+
+.secondaryImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.secondaryImages {
+    height: auto;
+    width: 50%;
+    padding: 5px 5px 0px 5px;
+    background-position: center;
+}
+
+.characterInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.characterInfo p {
+    padding-right: 10px;
+}
+
+.characterImage {
+    height: 214px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    text-align: center;
+}
+
+.productContent h4 {
+    font-family: 'Turret Road', monospace;
+}
+
+.productContent p {
+    font-family: 'Turret Road', monospace;
+}
+
+@media only screen and (max-width: 768px) {
+    .DetailProduct {
+        flex-direction: column-reverse;
+    }
+
+    .characterInfo {
+        flex-direction: column;
+    }
+
+    .characterImageContainer {
+        align-self: center;
+    }
+
+    .productContent {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .robotHeader h1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
