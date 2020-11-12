@@ -4,7 +4,6 @@ namespace RobotStores\Hydrators;
 
 class ProductHydrator
 {
-    private array $productsArray;
 
     static public function getFilteredProducts(): array
     {
