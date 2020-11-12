@@ -1,6 +1,14 @@
 <?php
     require('vendor/autoload.php');
     $productID = $_GET['id'];
+    $obj = \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
+    $objCharacter = $obj->getCharacter();
+    $objCategory = $obj->getCategory();
+    $imageTwo = '';
+    $imageThree = '';
+//            $imageTwo = isset($obj->getImage2()) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageTwo . '"class="secondaryImages" alt="Product Image"></div>' : '';
+
+//            $imageThree = isset($obj->getImage3()) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageThree . '"class="secondaryImages" alt="Product Image"></div>' : '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,40 +33,33 @@
         </header>
         <div class="container-fluid">
             <div class="row detailProduct">
-            <?php
-            // change this to \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
-            $obj = \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
-
-            $imageTwo = isset($obj->imageTwo) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageTwo . '"class="secondaryImages" alt="Product Image"></div>' : '';
-
-            $imageThree = isset($obj->imageThree) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageThree . '"class="secondaryImages" alt="Product Image"></div>' : '';
-            ?>
-            <div class="productImages col-sm-12 col-md-6">
-                <div style="max-width: 400px; margin: 0 auto;">
-                    <img src="<?php echo $obj->image ?>"class="img-fluid" alt="Product Image">
-                </div>
-                <div class="secondaryImageContainer">
-                    <?php echo $imageTwo . $imageThree ?>
-                </div>
-            </div>
-            <div class="productContent col-sm-12 col-md-6">
-                <div>
-                    <h2 class="mb-4 text-center"><?php echo $obj->title ?></h2>
-                </div>
-                <div>
-                    <h4 class="mt-2"><?php echo $obj->category['name'] ?></h4>
-                    <p class="mb-4"><?php echo $obj->productDescription ?></p>
-                </div>
-                <div>
-                    <h3 class="mb-4 text-center"> Price: £<?php echo $obj->price ?></h3>
-                </div>
-                <div class="characterInfo">
-                    <div class="float-left">
-                        <h4 class="mt-2">Character: <?php echo $obj->character['name'] ?></h4>
-                        <p class="mt-2"><?php echo $obj->character['description'] ?></p>
+                <div class="productImages col-sm-12 col-md-6">
+                    <div style="max-width: 400px; margin: 0 auto;">
+                        <img src="<?php echo $obj->getImage(); ?>"class="img-fluid" alt="Product Image">
                     </div>
-                    <div class="float-right characterImageContainer">
-                        <img src="<?php echo $obj->character['image'] ?>" class="characterImage" alt="Character Image">
+                    <div class="secondaryImageContainer">
+                        <?php echo $imageTwo . $imageThree; ?>
+                    </div>
+                </div>
+                <div class="productContent col-sm-12 col-md-6">
+                    <div>
+                        <h2 class="mb-4 text-center"><?php echo $obj->getTitle();?></h2>
+                    </div>
+                    <div>
+                        <h4 class="mt-2"><?php echo $objCategory->getName(); ?></h4>
+                        <p class="mb-4"><?php echo $obj->getDescription(); ?></p>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-center"> Price: £<?php echo $obj->getPrice(); ?></h3>
+                    </div>
+                    <div class="characterInfo">
+                        <div class="float-left">
+                            <h4 class="mt-2">Character: <?php echo $objCharacter->getName(); ?></h4>
+                            <p class="mt-2"><?php echo $objCharacter->getDescription(); ?></p>
+                        </div>
+                        <div class="float-right characterImageContainer">
+                            <img src="<?php echo $objCharacter->getImage(); ?>" class="characterImage" alt="Character Image">
+                        </div>
                     </div>
                 </div>
             </div>
