@@ -1,6 +1,17 @@
 <?php
-    require('methods.php');
-    require('vendor/autoload.php');
+require('vendor/autoload.php');
+$productID = $_GET['id'];
+$product = \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
+$productCharacter = $product->getCharacter();
+$productCategory = $product->getCategory();
+$imageTwo = '';
+$imageThree = '';
+if ($product->getImage2() !== NULL) {
+    $imageTwo = '<div style="max-width: 300px; text-align: center;"><img src="' . $product->getImage2() . '"class="secondaryImages" alt="Product Image"></div>';
+}
+if ($product->getImage3() !== NULL) {
+    $imageThree = '<div style="max-width: 300px; text-align: center;"><img src="' . $product->getImage2() . '"class="secondaryImages" alt="Product Image"></div>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
