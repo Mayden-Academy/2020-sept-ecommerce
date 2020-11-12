@@ -21,7 +21,7 @@ require('vendor/autoload.php');
     <div class="container text-center">
         <div class="row">
         <?php
-        foreach(\RobotStores\Hydrators\ProductHydrator::getFilteredProducts() as $product) {
+        foreach(\RobotStores\Hydrators\ProductHydrator::getAllProducts() as $product) {
             echo '<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-between baseProduct">
                        <div>
                             <img src=" ' . $product->getImage() . '" alt="product image">

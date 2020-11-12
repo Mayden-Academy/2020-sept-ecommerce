@@ -4,13 +4,7 @@ namespace RobotStores\Hydrators;
 
 class ProductHydrator
 {
-
-    static public function getFilteredProducts(): array
-    {
-        return self::getAllProducts();
-    }
-
-    static private function getAllProducts(): array
+    static public function getAllProducts(): array
     {
         $dbConnection = \RobotStores\DbConnector::getConnection();
         $query = $dbConnection->prepare('SELECT `id`, `title`, `price`, `image` FROM `products`;');
