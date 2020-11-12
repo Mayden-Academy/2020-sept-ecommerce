@@ -29,7 +29,7 @@ require('vendor/autoload.php');
                        </div>
                        <div>
                             <p>£' . $product->getPrice() . '</p>
-                            <button type="button" class="btn btn-info btn-sm">View Item</button>
+                            <a href="product.php?id=' . $product->getID() . '"><button type="button" class="btn btn-info btn-sm">View Item</button></a>
                        </div>
                   </div>';
         }
