@@ -19,18 +19,6 @@ body {
     font-family: 'Turret Road', monospace;
 }
 
-.robotHeader {
-    padding: 10px;
-}
-
-.container {
-    min-height: 85vh;
-}
-
-.robotFooter {
-    height: 5vh;
-}
-
 .robotHeader,
 .robotFooter {
     background-color: #117a8b52;
@@ -38,14 +26,12 @@ body {
 
 .robotHeader h1 {
     margin: 0 auto;
-    padding-top: 2vh;
+    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
     font-size: 3rem;
     font-weight: 700;
-}
-
-.robotFooter h4 {
-    font-size: 0.8rem;
-    padding-top: 1.5vh;
+    text-transform: capitalize;
 }
 
 p {
@@ -54,12 +40,12 @@ p {
     color: #5f5656;
 }
 
-.baseProduct img {
-    width: 100%;
-}
-
 .baseProduct {
     padding: 20px;
+}
+
+.baseProduct img {
+    width: 100%;
 }
 
 .baseProduct h2 {
@@ -70,4 +56,14 @@ p {
 .btn {
     width: 50%;
     margin: auto;
+}
+
+.robotFooter {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.robotFooter h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0;
 }

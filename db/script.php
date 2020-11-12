@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 $request = curl_init('https://dev.maydenacademy.co.uk/resources/store_products/products.json');
 curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($request);
@@ -13,6 +14,31 @@ $query->execute();
 $query = $db->prepare('DROP TABLE `characters`');
 $query->execute();
 $query = $db->prepare('CREATE TABLE `products` (
+=======
+
+try {
+    $request = curl_init('https://dev.maydenacademy.co.uk/resources/store_products/products.json');
+    curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
+    $response = curl_exec($request);
+    if($response === false) {
+        throw new Exception('curl request failed');
+    }
+    $data = json_decode($response, true);
+    curl_close($request);
+
+    $db = new PDO('mysql:host=db;dbname=robot_stores', 'root', 'password');
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $query = $db->prepare('DROP TABLE IF EXISTS `products`');
+    $query->execute();
+    $query = $db->prepare('DROP TABLE IF EXISTS `categories`');
+    $query->execute();
+    $query = $db->prepare('DROP TABLE IF EXISTS `characters`');
+    $query->execute();
+
+    $query = $db->prepare('CREATE TABLE `products` (
+>>>>>>> master
 `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT \'\',
   `price` float NOT NULL,

@@ -14,14 +14,14 @@ require('vendor/autoload.php');
 
 <body>
     <header class="container-fluid robotHeader">
-        <div class="sticky-top text-center align-middle">
+        <div class="text-center align-middle">
             <h1 class="align-middle">Robot Stores</h1>
         </div>
     </header>
     <div class="container text-center">
         <div class="row">
         <?php
-        foreach(\RobotStores\Hydrators\ProductHydrator::getFilteredProducts() as $product) {
+        foreach(\RobotStores\Hydrators\ProductHydrator::getAllProducts() as $product) {
             echo '<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-between baseProduct">
                        <div>
                             <img src=" ' . $product->getImage() . '" alt="product image">
@@ -29,7 +29,6 @@ require('vendor/autoload.php');
                        </div>
                        <div>
                             <p>£' . $product->getPrice() . '</p>
-                            <button type="button" class="btn btn-info btn-sm">View Item</button>
                        </div>
                   </div>';
         }
