@@ -30,4 +30,34 @@ class DetailedProduct extends BaseProduct
     {
         return $this->image2;
     }
+
+    public function getImage3(): ?string
+    {
+        return $this->image3;
+    }
+
+    public function getCategory(): CategoryInterface
+    {
+        return $this->category;
+    }
+
+    public function getCharacter(): CharacterInterface
+    {
+        return $this->character;
+    }
+
+    public function getCategoryId(): int
+    {
+        return $this->categoryId;
+    }
+
+    public function getCharacterId(): int
+    {
+        return $this->characterId;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
 }
