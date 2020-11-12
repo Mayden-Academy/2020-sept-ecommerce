@@ -19,16 +19,9 @@ body {
     font-family: 'Turret Road', monospace;
 }
 
-.robotHeader {
-    height: 10vh;
-}
-
-.container {
-    min-height: 85vh;
-}
-
 .robotFooter {
-    height: 5vh;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .robotHeader,
@@ -37,15 +30,16 @@ body {
 }
 
 .robotHeader h1 {
-    margin: 0;
-    padding-top: 2vh;
+    padding-top: 15px;
+    padding-bottom: 10px;
     font-size: 3rem;
     font-weight: 700;
+    text-transform: capitalize;
 }
 
 .robotFooter h4 {
     font-size: 0.8rem;
-    padding-top: 1.5vh;
+    margin-bottom: 0px;
 }
 
 p {
