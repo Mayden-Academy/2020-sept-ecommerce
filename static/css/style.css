@@ -19,17 +19,12 @@ body {
     font-family: 'Turret Road', monospace;
 }
 
-.robotHeader {
-    padding: 10px;
-}
-
 .container {
     min-height: 85vh;
 }
 
-.robotFooter {
-    padding-bottom: 15px;
-    padding-top: 15px;
+.robotHeader {
+    padding: 10px;
 }
 
 .robotHeader,
