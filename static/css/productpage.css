@@ -71,7 +71,7 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-    .DetailProduct {
+    .detailProduct {
         flex-direction: column-reverse;
     }
 

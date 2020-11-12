@@ -14,7 +14,7 @@ require('vendor/autoload.php');
 
 <body>
     <header class="container-fluid robotHeader">
-        <div class="sticky-top text-center align-middle">
+        <div class="text-center align-middle">
             <h1 class="align-middle">Robot Stores</h1>
         </div>
     </header>
@@ -29,7 +29,7 @@ require('vendor/autoload.php');
                        </div>
                        <div>
                             <p>£' . $product->getPrice() . '</p>
-                            <button type="button" class="btn btn-info btn-sm">View Item</button>
+                            <a href="product.php?id=' . $product->getID() . '"><button type="button" class="btn btn-info btn-sm">View Item</button></a>
                        </div>
                   </div>';
         }
