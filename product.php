@@ -17,7 +17,7 @@
         <header>
             <div class="container-fluid robotHeader">
                 <div class="d-flex sticky-top justify-content-start">
-                    <button class="float-left">Home</button>
+                    <a href="index.php"><button class="homeButton float-left">Home</button></a>
                     <h1>Robot Stores</h1>
                 </div>
             </div>

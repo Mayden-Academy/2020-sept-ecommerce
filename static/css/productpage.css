@@ -12,12 +12,15 @@ body {
 .footer {
     flex-shrink: 0;
 }
+a {
+    color: #000500;
+}
 
-.robotHeader button {
+.homeButton {
     margin-right: -60px;
     width: 60px;
     border-radius: 10%;
-
+    height: 100%;
 }
 
 .DetailProduct {
