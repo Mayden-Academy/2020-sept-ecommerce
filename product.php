@@ -1,6 +1,6 @@
 <?php
-    require('methods.php');
     require('vendor/autoload.php');
+    $productID = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +26,8 @@
         <div class="container-fluid">
             <div class="row detailProduct">
             <?php
-            // change this to ProductHydrator::GetProduct
-            $obj = new DetailedProduct();
+            // change this to \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
+            $obj = \RobotStores\Hydrators\ProductHydrator::getProduct($productID);
 
             $imageTwo = isset($obj->imageTwo) ? '<div style="max-width: 300px; text-align: center;"><img src="' . $obj->imageTwo . '"class="secondaryImages" alt="Product Image"></div>' : '';
 
