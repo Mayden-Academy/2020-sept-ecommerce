@@ -17,10 +17,29 @@ require('vendor/autoload.php');
             <h1 class="align-middle">Robot Stores</h1>
         </div>
     </header>
+    <div class="filterContainer">
+        <div class="filterLabel">
+            <h3>Character Filter:</h3>
+        </div>
+        <form>
+            <select name="characterFilter" id="characters">
+                <option value="" selected>All</option>
+                <?php
+                $character = \RobotStores\Hydrators\CharacterHydrator::getCharacters();
+                foreach($character as $filteredCharacter) {
+                    echo '<option value="' . $filteredCharacter->getId() . '">' . $filteredCharacter->getName() . '</option>';
+
+                }
+                ?>
+            </select>
+            <input type="submit" value="Apply Filter">
+        </form>
+
+    </div>
     <div class="container text-center">
         <div class="row">
         <?php
-        foreach(\RobotStores\Hydrators\ProductHydrator::getAllProducts() as $product) {
+        foreach(\RobotStores\Hydrators\ProductHydrator::getFilteredProducts($_GET["characterFilter"]) as $product) {
             echo '<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column justify-content-between baseProduct">
                        <div>
                             <img src=" ' . $product->getImage() . '" alt="product image">

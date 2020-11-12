@@ -42,6 +42,19 @@ body {
     text-transform: capitalize;
 }
 
+.filterContainer {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0;
+}
+.filterContainer .btn {
+    width: auto;
+    margin-right: 15px;
+}
+.filterLabel{
+    padding-right: 15px;
+}
+
 p {
     font-size: 1rem;
     font-family: sans-serif;

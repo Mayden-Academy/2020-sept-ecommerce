@@ -14,4 +14,13 @@ class CharacterHydrator
         $query->setFetchMode(\PDO::FETCH_CLASS, '\RobotStores\Entities\Character');
         return $query->fetch();
     }
+
+    static public function getCharacters(): array
+    {
+        $dbConnection = \RobotStores\DbConnector::getConnection();
+        $query = $dbConnection->prepare('SELECT `id`, `name` FROM `characters`');
+        $query->execute();
+        $query->setFetchMode(\PDO::FETCH_CLASS, '\RobotStores\Entities\Character');
+        return $query->fetchAll();
+    }
 }
