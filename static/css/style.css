@@ -19,9 +19,14 @@ body {
     font-family: 'Turret Road', monospace;
 }
 
+<<<<<<< HEAD
 .robotFooter {
     padding-bottom: 15px;
     padding-top: 15px;
+=======
+.robotHeader {
+    padding: 10px;
+>>>>>>> origin/story3
 }
 
 .robotHeader {
